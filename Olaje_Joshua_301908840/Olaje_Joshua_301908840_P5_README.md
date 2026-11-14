@@ -11,7 +11,7 @@ cluster was deployed.
 
 ## Main Document
 
-[Distributed and cloud design](01-distributed-cloud-design.md)
+[Distributed and cloud design](Olaje_Joshua_301908840_P5_DistributedCloudDesign.md)
 
 The document includes an architecture diagram, case-specific
 trade-offs, references and a proposed validation plan.

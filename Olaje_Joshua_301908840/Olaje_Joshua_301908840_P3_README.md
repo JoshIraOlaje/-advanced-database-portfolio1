@@ -16,16 +16,18 @@ row locking and capacity-controlled registration in CampusFlow.
 
 | File | Purpose |
 |---|---|
-| 01-rollback-demo.sql | Demonstrate cancellation of an uncommitted grade update |
-| 02-commit-demo.sql | Demonstrate that a committed update persists |
-| 03-isolation-session-a.sql | Make an uncommitted update in Connection A |
-| 03-isolation-session-b.sql | Read the committed value in Connection B |
-| 04-locking-session-a.sql | Lock an offering and register a student |
-| 04-locking-session-b.sql | Request the same lock and inspect enrolment afterward |
-| 05-registration-procedure.sql | Create the capacity-checking registration procedure |
-| 06-test-registration-procedure.sql | Test registration acceptance and rejection |
+| Olaje_Joshua_301908840_P3_RollbackDemo.sql | Demonstrate cancellation of an uncommitted grade update |
+| Olaje_Joshua_301908840_P3_CommitDemo.sql | Demonstrate that a committed update persists |
+| Olaje_Joshua_301908840_P3_IsolationSessionA.sql | Make an uncommitted update in Connection A |
+| Olaje_Joshua_301908840_P3_IsolationSessionB.sql | Read the committed value in Connection B |
+| Olaje_Joshua_301908840_P3_LockingSessionA.sql | Lock an offering and register a student |
+| Olaje_Joshua_301908840_P3_LockingSessionB.sql | Request the same lock and inspect enrolment afterward |
+| Olaje_Joshua_301908840_P3_OriginalCombinedProcedureAndTests.sql | Create the capacity-checking registration procedure |
+| Olaje_Joshua_301908840_P3_TestRegistrationProcedure.sql | Test registration acceptance and rejection |
 
-Screenshots provide evidence of the actual results.
+Supplied screenshots document selected results. Some exercise outcomes were
+confirmed in conversation without a corresponding screenshot. Recovered scripts
+are labelled; they are not newly generated execution evidence.
 
 ## Prerequisites
 
@@ -84,8 +86,9 @@ After acquiring the lock, B checked enrolment rather than
 inserting another registration. The intended final count was 3.
 
 The exercise completed without reported errors on retry.
-The final count and waiting behaviour should be supported by
-the saved screenshots.
+A separate screenshot of the successful lock wait and final count was not
+supplied. The full-offering rejection provides supporting evidence that the
+offering was full at the later procedure test.
 
 The acceptance decision in this exercise was manual.
 The stored procedure below automates that decision.
@@ -116,7 +119,7 @@ it manages its own transaction.
 |---|---|
 | Procedure creation | Confirmed successful |
 | CALL register_student(4, 1) | Confirmed rejected: Course offering is full |
-| CALL register_student(4, 4) | Record the actual execution result before marking verified |
+| CALL register_student(4, 4) | Final verification screenshot confirms students 3 and 4 are registered for offering 4 |
 
 The full-offering rejection returned MySQL error 1644.
 This was an intentional application error raised by SIGNAL.
@@ -166,3 +169,13 @@ so A could release its lock promptly.
 ChatGPT assisted with SQL development, explanations, troubleshooting
 and documentation drafts. The student executed the exercises
 locally and checked the observed results.
+
+## Execution staging
+
+Run isolation and locking files block by block in the documented A/B order.
+Do not execute an entire session A file at once: it includes its later cleanup.
+Use Olaje_Joshua_301908840_P3_RegistrationProcedure.sql for creation and Olaje_Joshua_301908840_P3_TestRegistrationProcedure.sql for tests. The original combined upload is retained separately.
+
+## Final MySQL verification evidence
+
+The new screenshots confirm seven tables, the surname index, 10,006 students, 10,000 benchmark students, ten selected surname matches, grade 78 for registration 1 and the presence of register_student. Offering 1 has students 1, 2 and 3; offering 4 has students 3 and 4. All four enrolments are within capacity, and the duplicate-pair query reports zero rows. These verify current state, not a captured historical lock wait.

@@ -16,12 +16,12 @@ execution-plan interpretation and a surname-indexing experiment.
 
 | File | Purpose |
 |---|---|
-| 01-enrolment-report.sql | Report enrolment and remaining places |
-| 02-student-academic-report.sql | Retrieve a student's academic records and inspect the execution plan |
-| 03-generate-benchmark-students.sql | Generate 10,000 synthetic students |
-| 04-surname-search-before-index.sql | Retrieve surname matches and capture the baseline plan and timing |
-| 05-surname-search-after-index.sql | Create the surname index and inspect indexed execution |
-| 06-performance-analysis.md | Interpret the observed results and limitations |
+| Olaje_Joshua_301908840_P2_EnrolmentReport.sql | Report enrolment and remaining places |
+| Olaje_Joshua_301908840_P2_AcademicReport.sql | Retrieve a student's academic records and inspect the execution plan |
+| Olaje_Joshua_301908840_P2_GenerateBenchmarkStudents.sql | Generate 10,000 synthetic students |
+| Olaje_Joshua_301908840_P2_SurnameBeforeIndex.sql | Retrieve surname matches and capture the baseline plan and timing |
+| Olaje_Joshua_301908840_P2_SurnameAfterIndex.sql | Create the surname index and inspect indexed execution |
+| Olaje_Joshua_301908840_P2_PerformanceAnalysis.md | Interpret the observed results and limitations |
 
 Screenshots provide supporting evidence of query results,
 execution plans and measured timings.

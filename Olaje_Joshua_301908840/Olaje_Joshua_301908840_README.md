@@ -45,16 +45,17 @@ procedure. Unrestricted direct inserts can bypass that check.
 
 ## Portfolio Navigation
 
-| Portfolio | Contents |
-|---|---|
-| [1. Database design](portfolio-1-database-design/) | Business rules, ER diagram, relational schema, normalisation, table creation and constraint tests |
-| [2. Query optimisation](portfolio-2-query-optimisation/) | Reports, execution plans, benchmark data and indexing analysis |
-| [3. Transactions and concurrency](portfolio-3-transactions-concurrency/) | Commit, rollback, isolation, row locking and registration procedure |
-| [4. NoSQL](portfolio-4-nosql/) | MongoDB documents, embedded-course queries, grade update and modelling discussion |
-| [5. Distributed/cloud](portfolio-5-distributed-cloud/) | Proposed replication, consistency, availability, sharding and recovery design |
+This submission uses a single named folder. Every file carries the student prefix and a portfolio identifier.
 
-Each portfolio README explains its files, implementation steps,
-evidence and limitations.
+| Portfolio | Main document |
+|---|---|
+| Portfolio 1 | [README](Olaje_Joshua_301908840_P1_README.md) |
+| Portfolio 2 | [README](Olaje_Joshua_301908840_P2_README.md) |
+| Portfolio 3 | [README](Olaje_Joshua_301908840_P3_README.md) |
+| Portfolio 4 | [README](Olaje_Joshua_301908840_P4_README.md) |
+| Portfolio 5 | [README](Olaje_Joshua_301908840_P5_README.md) |
+
+Refer to Olaje_Joshua_301908840_FinalChecks.md for recovery details, checks performed and remaining user-side actions. This renamed copy is not a new GitHub repository and does not contain Git history.
 
 ## Technologies Used
 
@@ -231,3 +232,7 @@ experience and was shortened with ChatGPT assistance.
 
 I remain responsible for reviewing, understanding and explaining
 the submitted work.
+
+## Recovered files and verification
+
+Several scripts omitted from the uploaded ZIP have been recovered from the demonstrated commands and labelled accordingly. Static packaging checks do not replace execution on the student's Windows databases. See [final checks](Olaje_Joshua_301908840_FinalChecks.md).

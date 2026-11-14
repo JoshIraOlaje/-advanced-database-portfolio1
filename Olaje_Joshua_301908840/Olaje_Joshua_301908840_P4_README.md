@@ -112,24 +112,26 @@ This changed MongoDB only. It did not update Chidi's MySQL record.
 
 | File | Purpose |
 |---|---|
-| 01-student-term-records.json | Exported starting documents |
-| 02-document-queries.json | Named examples of Compass filters |
-| 03-update-embedded-grade.js | Shell script for updating and checking Chidi's grade |
+| Olaje_Joshua_301908840_P4_InitialStudentTermRecords.json | Exported starting documents |
+| Olaje_Joshua_301908840_P4_DocumentQueries.json | Named examples of Compass filters |
+| Olaje_Joshua_301908840_P4_UpdateEmbeddedGrade.js | Shell script for updating and checking Chidi's grade |
 
-Screenshots show the document structure, query results and update
-evidence.
+Screenshots show the inserted document, three-document list and a student filter.
+BIO101 query results and the grade update were confirmed by the student during
+the project; screenshots of those specific outputs were not supplied.
+The recovered update script and read-only verification script are included.
 
 ## 9. Reproduction Instructions
 
 1. Install MongoDB Community Server and Compass.
 2. Connect Compass to the local MongoDB server.
 3. Create campusflow_nosql with collection student_term_records.
-4. Import 01-student-term-records.json into the empty collection.
+4. Import Olaje_Joshua_301908840_P4_InitialStudentTermRecords.json into the empty collection.
 5. Confirm that three documents exist.
-6. Run each filter from 02-document-queries.json individually
+6. Run each filter from Olaje_Joshua_301908840_P4_DocumentQueries.json individually
    in the Compass filter box.
 7. Open the embedded MongoDB shell.
-8. Run 03-update-embedded-grade.js by pasting its contents
+8. Run Olaje_Joshua_301908840_P4_UpdateEmbeddedGrade.js by pasting its contents
    into the shell.
 9. Verify that Chidi's CSC101 grade is 72.
 
