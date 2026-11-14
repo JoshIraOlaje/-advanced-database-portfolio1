@@ -1,0 +1,80 @@
+[{
+  "_id": "CF/2026/001:2026/2027:1",
+  "student_id": 1,
+  "matric_number": "CF/2026/001",
+  "first_name": "Ada",
+  "last_name": "Okafor",
+  "department": {
+    "department_id": 1,
+    "department_code": "BIO",
+    "department_name": "Biological Sciences"
+  },
+  "academic_session": "2026/2027",
+  "semester": 1,
+  "courses": [
+    {
+      "offering_id": 1,
+      "course_code": "BIO101",
+      "course_title": "Introduction to Biology",
+      "credit_units": 3,
+      "lecturer_name": "Musa Ibrahim",
+      "grade": 78
+    },
+    {
+      "offering_id": 3,
+      "course_code": "MAT101",
+      "course_title": "Elementary Mathematics",
+      "credit_units": 3,
+      "lecturer_name": "Tunde Akin",
+      "grade": 71
+    }
+  ]
+},
+{
+  "_id": "CF/2026/002:2026/2027:1",
+  "student_id": 2,
+  "matric_number": "CF/2026/002",
+  "first_name": "Bayo",
+  "last_name": "Adeyemi",
+  "department": {
+    "department_id": 1,
+    "department_code": "BIO",
+    "department_name": "Biological Sciences"
+  },
+  "academic_session": "2026/2027",
+  "semester": 1,
+  "courses": [
+    {
+      "offering_id": 1,
+      "course_code": "BIO101",
+      "course_title": "Introduction to Biology",
+      "credit_units": 3,
+      "lecturer_name": "Musa Ibrahim",
+      "grade": 65
+    }
+  ]
+},
+{
+  "_id": "CF/2026/004:2026/2027:1",
+  "student_id": 4,
+  "matric_number": "CF/2026/004",
+  "first_name": "Chidi",
+  "last_name": "Eze",
+  "department": {
+    "department_id": 2,
+    "department_code": "CSC",
+    "department_name": "Computer Science"
+  },
+  "academic_session": "2026/2027",
+  "semester": 1,
+  "courses": [
+    {
+      "offering_id": 2,
+      "course_code": "CSC101",
+      "course_title": "Introduction to Computing",
+      "credit_units": 3,
+      "lecturer_name": "Grace Obi",
+      "grade": null
+    }
+  ]
+}]
