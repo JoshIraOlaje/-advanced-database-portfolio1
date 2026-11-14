@@ -1,0 +1,16 @@
+{
+  "all_term_records": {},
+  "students_taking_bio101": {
+    "courses.course_code": "BIO101"
+  },
+  "bio101_grade_at_least_70": {
+    "courses": {
+      "$elemMatch": {
+        "course_code": "BIO101",
+        "grade": {
+          "$gte": 70
+        }
+      }
+    }
+  }
+}
